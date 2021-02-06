@@ -1,0 +1,33 @@
+[
+    {
+        "id":1,
+        "name":"sugar",
+        "weight":"500 grams",
+        "title": "react",
+        "month": "Dec",
+        "year":[
+            {
+                "jzgdc":"kjdsh"
+            }
+        ]
+
+},
+{
+    "id":2,
+    "title": "react1",
+    "month": "Dec1"
+
+},
+{
+    "id":3,
+    "title": "react2",
+    "month": "Dec2"
+
+},
+{
+    "id":4,
+    "title": "react3",
+    "month": "Dec3"
+
+}
+]
