@@ -9,18 +9,26 @@ class Home extends React.Component{
         super();
 
         this.state = {
-            data:JSON
+            news:JSON,
+            filtered:JSON
         }
 
     }
+
+    filterNews=(userInput) =>{
+        const Output = this.state.news.filter((data) =>{
+            return data.title.indexOf(userInput)>-1
+        })
+        this.setState({filtered:Output})
+
+    }
+
     render(){
-        console.log(this.state.data)
         return(
             <React.Fragment>
-                <Header/>
+                <Header userText = {(data) => {this.filterNews(data)}}/>
                 <hr/>
-               <NewsDiaplay newsData={this.state.data}/>
-               <hr/>
+               <NewsDiaplay newsData={this.state.filtered}/>
                <Footer year='2019'/>
                </React.Fragment>
         )

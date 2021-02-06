@@ -11,8 +11,9 @@ class Header extends React.Component{
         }
     }
 
-    handelChange=(event) => {
-        this.setState({keyword: event.target.value?event.target.value:'user text here'})
+    handleChange=(event) => {
+        this.setState({keyword:event.target.value?event.target.value:'user text here'})
+        this.props.userText( event.target.value)
     }
 
     render(){
@@ -21,7 +22,7 @@ class Header extends React.Component{
              <header>
                  <div className="logo">{this.state.title}</div>               
               <center>
-                <input onChange={this.handelChange}/>
+                <input onChange={this.handleChange}/>
                 <div>{this.state.keyword}</div>
               </center>
 

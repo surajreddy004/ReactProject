@@ -2,13 +2,13 @@ import React from 'react'
 
 const NewsDiaplay = (props) =>{
 
-    const renderList = props.newsData.map((data,key) => {
+    const renderList = props.newsData.map((data) => {
 
     return(
         <div>
-            <h1 key={data.id}>{data.id}</h1>
-            <h1>key={data.month}</h1>
-            <h2>key={data.title}</h2>
+            <h1>{data.id}</h1>
+            <h1>{data.month}</h1>
+            <h2>{data.title}</h2>
         </div>
 
     )
